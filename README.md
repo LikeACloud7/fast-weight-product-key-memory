@@ -16,10 +16,23 @@
 
 ## Get started
 
+Install dependencies as follows:
+
 ```bash
 git clone https://github.com/SakanaAI/fast-weight-product-key-memory.git
 cd fast-weight-product-key-memory
+# Preferably use a virtual environment
+# Tested with Python 3.12.11
 bash install.sh
+```
+
+Prepare pre-training and evaluation data as follows:
+
+```bash
+bash scripts/data/fineweb.sh
+bash scripts/data/lc64_nanogpt.sh
+bash scripts/data/lambada.sh
+bash scripts/data/pile_domain.sh
 ```
 
 ## Training

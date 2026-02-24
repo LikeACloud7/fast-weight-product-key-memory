@@ -1,11 +1,10 @@
 # Download nanogpt-style data from https://manifestai.com/articles/longcrawl64/
-
-# Move to the following locations
-mv data/lc64/train.bin data/lc64/50BT.bin
+mkdir data/lc64
+GSUTIL_PARALLEL_THREAD_COUNT=5 GSUTIL_PARALLEL_PROCESS_COUNT=5 gsutil -m cp -r gs://longcrawl64/*.bin data/lc64
 mv data/lc64/val.bin data/lc64/test.bin
 
 # Subsample 10BT train set
-head -c 20GB data/lc64/train.bin > data/lc64/10BT.bin
+head -c 20GB data/lc64/train.bin > data/lc64/train.10BT.bin
 
 # Decode
 python src/corpus/lc64_nanogpt_process.py data/lc64/train.10BT.bin data/lc64/10BT.jsonl  --workers 64
