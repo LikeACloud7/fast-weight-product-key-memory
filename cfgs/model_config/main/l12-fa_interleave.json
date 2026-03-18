@@ -30,9 +30,5 @@
   "use_cache": true,
   "use_sliding_window": false,
   "vocab_size": 32000,
-  "layer_types": ["linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention"],
-  "pkm_layers": [2, 6, 10],
-  "pkm_heads": 4,
-  "pkm_topk": 32,
-  "pkm_n_subkeys": 512
+  "layer_types": ["linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention", "linear_attention", "linear_attention", "linear_attention", "full_attention"]
 }
